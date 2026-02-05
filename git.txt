@@ -1,0 +1,3 @@
+git --version =>to check weather it is installed or not
+git init =>git init initializes a new Git repository by creating the hidden .git directory, enabling version control for the project.
+

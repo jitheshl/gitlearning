@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            position: relative;
+            background-color: aquamarine;
+        }
+
+        .relative{
+            position: relative;
+            left: 50px;
+            top: 50px;
+            background-color: blueviolet;
+            padding: 50px;
+            /* border: 20px solid red; */
+
+
+        }
+
+        .absolute{
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            background-color: aqua;
+            padding: 50px;
+            /* border: 20px solid blue; */
+        }
+
+        .fixed{
+            position: fixed;
+            background-color: yellow;
+            padding: 50px;
+            bottom: 20px;
+            right: 20px;
+            /* border: 20px solid brown; */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Positioning & Display Properties</h1>
+    <!-- Positioning Properties -->
+    <!-- relative , absolute , fixed -->
+      <div class="main">
+    <!-- stay in normal place but it can be moved -->
+    <div class="relative">relative</div>
+    <!-- can be moved to any place where you want to move -->
+    <div class="absolute">absolute</div>
+    <!-- not moved even if you scroll the page -->
+    <div class="fixed">fixed</div>
+      </div>
+</body>
+</html>

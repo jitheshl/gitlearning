@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clickable Panda</title>
+
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #f2f2f2;
+        font-family: Arial;
+    }
+
+    .panda{
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* EARS */
+    .ear{
+        width: 50px;
+        height: 50px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: -20px;
+        cursor: pointer;
+    }
+
+    .ear.left{ left: 0; }
+    .ear.right{ right: 0; }
+
+    /* BODY */
+    .body{
+        width: 200px;
+        height: 200px;
+        background: white;
+        border-radius: 50%;
+        border: 4px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+
+    /* EYES */
+    .eye{
+        width: 30px;
+        height: 30px;
+        background: black;
+        border-radius: 50%;
+        margin: 0 15px;
+    }
+
+    button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background: red;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="container">
+    <div class="panda">
+        <div class="ear left" onclick="changeLeft()"></div>
+        <div class="ear right" onclick="changeRight()"></div>
+
+        <div class="body" id="body">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+    </div>
+
+    <button onclick="vanish()">Vanish</button>
+</div>
+
+<script>
+    function changeLeft(){
+        document.getElementById("body").style.background = "red"; 
+    }
+
+    function changeRight(){
+        document.getElementById("body").style.background = "yellow";
+    }
+
+    function vanish(){
+        document.getElementById("container").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

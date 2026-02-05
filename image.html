@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image selector</title>
+</head>
+<!-- <style>
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+   .gallary{
+    width: 300px;
+
+   }
+   #mainimage{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+
+   }
+   .thumbnails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+   } -->
+
+   
+
+<!-- </style> -->
+<style>
+ body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   /* important */
+    background: white;
+}
+
+.gallary{
+    width: 320px;
+}
+
+#mainimage{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnails{
+    display: flex;
+    gap: 10px;          /* clean spacing */
+    margin-top: 15px;
+}
+
+.thumbnails img{
+    width: 70px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+</style>
+
+<body>
+    <div class="gallary">
+        <img id="mainimage" src="i1.jpg" alt="space">
+
+    </div>
+    <div class="thumbnails">
+        <img src="i1.jpg" alt="space" onclick="changeimage(this)">
+        <img src="i2.jpg" alt="space" onclick="changeimage(this)">
+        <img src="i3.jpg" alt="space" onclick="changeimage(this)">
+        <img src="i4.jpg" alt="space" onclick="changeimage(this)">
+    </div>
+    <script>
+        function changeimage(img){
+            document.getElementById("mainimage").src=img.src;
+        }
+    </script>
+</body>
+</html>
